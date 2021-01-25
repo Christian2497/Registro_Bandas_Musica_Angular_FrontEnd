@@ -1,9 +1,9 @@
-<h1> {{titulo}} </h1>
+<h1>Hola Hola</h1>
 
 <article *ngFor="let banda of bandas">
     <div>
         <img src="{{banda.image}}" alt="{{banda.title}}">
     </div>
     <h2> {{banda.title}}</h2>
-    <a href="#"> Ver Detalles </a>
+    <a [routerLink]="['/bandas', banda._id]"> Ver Detalles </a>
 </article>
