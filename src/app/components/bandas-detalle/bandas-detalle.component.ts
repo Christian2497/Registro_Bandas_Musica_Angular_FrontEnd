@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Global } from '../../services/global';
 import { BandaService } from '../../services/banda.service';
 import { Banda } from '../../models/banda';
 
@@ -12,13 +13,14 @@ import { Banda } from '../../models/banda';
 export class BandasDetalleComponent implements OnInit {
 
   public banda: Banda;
+  public url: string;
 
   constructor(
     private _bandaService: BandaService,
     private _route: ActivatedRoute,
     private _router: Router
   ) { 
-    
+    this.url = Global.url;
   }
 
   ngOnInit() {

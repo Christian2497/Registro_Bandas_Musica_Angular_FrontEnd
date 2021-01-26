@@ -1,11 +1,9 @@
-<h1> Detalles de {{banda.title}} </h1>
-
-<article>
+<article *ngFor="let banda of bandas">
+    <h1> Busqueda de {{banda.title}} </h1>
     <div>
         <img src="{{banda.image}}" alt="{{banda.title}}">
     </div>
     <h2> {{banda.title}}</h2>
     <h5> {{banda.year}}</h5>
     <p> {{banda.description}} </p>
-    <a [routerLink]="['/bandas']"> Volver al listado de bandas </a>
 </article>

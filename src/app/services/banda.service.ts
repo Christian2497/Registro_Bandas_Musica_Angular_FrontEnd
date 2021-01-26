@@ -26,6 +26,10 @@ export class BandaService {
         return this._http.get(this.url+'bandas/'+bandaId);
     }
 
+    search(searchString):Observable<any>{
+        return this._http.get(this.url+'search/'+searchString);
+    }
+
     /* public bandas: Banda[];
 
     constructor(){

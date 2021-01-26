@@ -1,0 +1,23 @@
+<div>
+    <section>
+        <h1> Añadir Banda </h1>
+
+        <form #bandaForm="ngForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="title"> Titulo </label>
+                <input type="text" name="title" #nombre="ngModel" [(ngModel)]="banda.title"/>
+
+                <label for="year"> Año </label>
+                <input type="number" name="year" #year="ngModel" [(ngModel)]="banda.year"/>
+
+                <label for="description"> Descripción </label>
+                <textarea name="año" #description="ngModel" [(ngModel)]="banda.description"></textarea>
+
+                <label for="image"> Imagen </label>
+                <input type="image" name="image" #image="ngModel" [(ngModel)]="banda.image"/>
+
+                <input type="submit" />
+            </div>
+        </form>
+    </section>
+</div>
