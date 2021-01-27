@@ -1,23 +1,27 @@
 <div>
-    <section>
-        <h1> Añadir Banda </h1>
+    <div>
+        <div class="titulo">
+            <h1> Añadir Banda </h1>
+        </div>
 
         <form #bandaForm="ngForm" (ngSubmit)="onSubmit()">
-            <div>
+            <div class="formulario">
                 <label for="title"> Titulo </label>
-                <input type="text" name="title" #nombre="ngModel" [(ngModel)]="banda.title"/>
-
-                <label for="year"> Año </label>
-                <input type="number" name="year" #year="ngModel" [(ngModel)]="banda.year"/>
+                <input type="text" name="title" class="input" #nombre="ngModel" [(ngModel)]="banda.title"/>
 
                 <label for="description"> Descripción </label>
-                <textarea name="año" #description="ngModel" [(ngModel)]="banda.description"></textarea>
+                <textarea name="año" class="input" #description="ngModel" [(ngModel)]="banda.description"></textarea>
 
-                <label for="image"> Imagen </label>
-                <input type="image" name="image" #image="ngModel" [(ngModel)]="banda.image"/>
+                <label for="year"> Año </label>
+                <input type="number" name="year" class="input" #year="ngModel" [(ngModel)]="banda.year"/>
 
-                <input type="submit" />
+                <!-- <angular-file-uploader
+                    [config]="afuConfig"  
+                >
+                </angular-file-uploader> -->
+
+                <input type="submit" value="Guardar"/>
             </div>
         </form>
-    </section>
+    </div>
 </div>

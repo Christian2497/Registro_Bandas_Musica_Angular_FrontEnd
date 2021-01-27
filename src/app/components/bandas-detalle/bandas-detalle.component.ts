@@ -42,4 +42,16 @@ export class BandasDetalleComponent implements OnInit {
     });
   }
 
+
+  delete(id){
+    this._bandaService.delete(id).subscribe(
+      response => {
+        this._router.navigate(['/bandas'])
+      },
+      error => {
+        console.log(error)
+      }
+    )
+  }
+
 }

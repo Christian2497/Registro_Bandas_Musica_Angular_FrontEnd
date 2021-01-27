@@ -1,9 +1,13 @@
-<h1>Listado de Bandas de Rock de los 70 </h1>
-<a [routerLink]="['/formulario']"> Crear una banda </a>
-<article *ngFor="let banda of bandas">
-    <div>
-        <img src="{{banda.image}}" alt="{{banda.title}}">
+<div class="titulo">
+    <h1>Listado de Bandas de Rock de los 70 </h1>
+    <button (click)="redireccion()" class="button1"> Crear una banda </button>
+</div>
+<div class="bandas" *ngFor="let banda of bandas">
+    <div class="banda">
+        <div>
+            <img src="{{banda.image}}" alt="{{banda.title}}">
+        </div>
+        <h2> {{banda.title}}</h2>
+        <a [routerLink]="['/bandas', banda._id]"> Ver Detalles </a>
     </div>
-    <h2> {{banda.title}}</h2>
-    <a [routerLink]="['/bandas', banda._id]"> Ver Detalles </a>
-</article>
+</div>

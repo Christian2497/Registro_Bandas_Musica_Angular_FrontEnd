@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AngularFileUploaderModule } from 'angular-file-uploader';
 
 import { AppComponent } from './app.component';
 import { BandasComponent } from './components/bandas/bandas.component';
@@ -24,7 +25,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     BrowserModule,
     routing,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFileUploaderModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
