@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Banda } from '../models/banda';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Global } from './global';
